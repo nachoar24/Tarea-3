@@ -1,0 +1,213 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d3e9d3;
+    padding: 10px;
+}
+
+.header-left, .header-right {
+    flex: 1;
+    padding: 10px;
+}
+
+.main-navigation {
+    background-color: #a1c183;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex: 1; /* Esto permite que el contenido crezca para llenar el espacio disponible */
+    background-color: #d3dbe2;
+    padding: 10px;
+}
+
+aside {
+    flex: 1;
+    background-color: #a1b3d1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+aside h2, aside h3 {
+    margin-top: 0;
+    color: #fff;
+    background-color: #5a89c6;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+aside h2 {
+    font-size: 1.5em;
+}
+
+aside h3 {
+    font-size: 1.2em;
+    color: #3b73af;
+}
+
+aside p, aside ul {
+    margin: 10px 0;
+}
+
+aside ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+main {
+    flex: 2;
+    background-color: #c2d1e8;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    background-color: #8faedb;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+article h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #5a89c6;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+article h3 {
+    font-size: 1.2em;
+    color: #3b73af;
+}
+
+article p {
+    margin: 10px 0;
+}
+
+article ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f5d7bd;
+    padding: 10px;
+}
+
+.img {
+    background-color: #e79a6f;
+    width: 22%;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #606060;
+    padding: 10px;
+    color: white;
+}
+
+.footer-content {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Esto hace que las imágenes insertadas se ajusten correctamente al espacio donde están contenidas */
+.img img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover; /* Esto asegura que la imagen se ajuste bien al contenedor */
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .main-navigation {
+        text-align: left; /* Ajustar el texto de la navegación */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .images {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .img {
+        width: 45%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    .content {
+        flex-direction: row;
+    }
+
+    .images {
+        flex-direction: row;
+    }
+
+    .img {
+        width: 22%;
+    }
+}
